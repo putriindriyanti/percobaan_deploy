@@ -1,10 +1,11 @@
 const router = require('express').Router();
 
 const {image} = require('../libs/multer');
-const {createImage} = require('../controllers/media.controllers');
+const {createImage, getAllImage} = require('../controllers/media.controllers');
 
 router.post('/imagekit/create', image.single('data_gambar'), createImage);
-// router.post('/imagekit/images', image.single('image'), imagekit);
+
+router.put('/imagekit/images', getAllImage);
 
 
 module.exports = router;

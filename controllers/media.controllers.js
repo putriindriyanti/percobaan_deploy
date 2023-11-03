@@ -33,5 +33,34 @@ module.exports = {
             next(err);
         }
     },
+
+    getAllImage: async (req, res, next) =>{
+        try{
+            //let {judul, deskripsi, data_gambar} = req.body
+            
+            let allImage = await prisma.post.findMany ({
+                select :{
+                    id: true,
+                    judul: true,
+                    deskripsi: true,
+                    data_gambar: true
+                } 
+            });
+
+            return res.status(200).json({
+                status: true,
+                message : 'OK',
+                err: null,
+                data: allImage
+            }); 
+
+        } catch (err) {
+            return res.status(400).json({
+                status: false,
+                message:   err.message,
+                data: null
+            });
+        }
+    },
     
 };
