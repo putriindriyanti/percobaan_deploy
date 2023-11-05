@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "post" ALTER COLUMN "judul" DROP NOT NULL,
+ALTER COLUMN "deskripsi" DROP NOT NULL,
+ALTER COLUMN "data_gambar" DROP NOT NULL;

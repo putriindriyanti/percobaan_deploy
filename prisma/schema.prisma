@@ -12,7 +12,7 @@ datasource db {
 
 model post {
   id         Int      @id @default(autoincrement())
-  judul      String
-  deskripsi  String
-  data_gambar String
+  judul      String?
+  deskripsi  String?
+  data_gambar String?
 }
