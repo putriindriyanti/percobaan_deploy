@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const Sentry = require('@sentry/node')
-const { PORT = 3000, SENTRY_DSN, ENV } = process.env;
+const { PORT = 3000, SENTRY_DSN, RAILWAY_ENVIRONMENT_NAME } = process.env;
 
 Sentry.init({
     dsn: SENTRY_DSN,
