@@ -14,7 +14,7 @@ Sentry.init({
     ],
     // Performance Monitoring
     tracesSampleRate: 1.0,
-    environment : ENV
+    environment: RAILWAY_ENVIRONMENT_NAME
   });
 
 app.use(express.json());
